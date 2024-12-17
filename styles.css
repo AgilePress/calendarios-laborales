@@ -1,0 +1,296 @@
+.formulario {
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+  gap: 0px 10px; 
+  margin: 0 auto;
+  width: 80%;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0fr 0fr 0fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "div1 div1 div2 div2 div3 div3"
+    "div4 div4 div4 div4 div5 div5"
+    "div6 div6 div7 div7 div8 div8";
+}
+
+.div1 { grid-area: div1; }
+
+.div2 { grid-area: div2; }
+
+.div3 { grid-area: div3; }
+
+.div4 { grid-area: div4; }
+
+.div5 { grid-area: div5; }
+
+.div6 { grid-area: div6; }
+
+.div7 { grid-area: div7; }
+
+.div8 { grid-area: div8; }
+
+
+#previsualizacion {
+  width: 1180px;
+  height: 750px;
+  margin: 0 auto;
+  font-family: ubuntu, sans-serif;
+}
+
+/* logos */
+#logo-asepeyo {
+	width: 250px;
+	height: 49px;
+}
+img#preview {
+    float: right;
+    max-width: 300px;
+    max-height: 60px;
+	margin-right: 10px;
+}
+
+/* calendar wrapper */
+
+.full-year-calendar-wrapper {
+  margin-top: 10px;
+  font-size: 13px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 10px;
+} 
+.calendar-wrapper {
+  max-width: 100%;
+  font: 100% system-ui;
+}
+.calendar,
+.calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+/* desplazar el primer día del mes */
+
+.enero .first-day {
+  grid-column-start: 3;
+}
+.febrero .first-day {
+  grid-column-start: 6;
+}
+.marzo .first-day {
+  grid-column-start: 6;
+}
+.abril .first-day {
+  grid-column-start: 2;
+}
+.mayo .first-day {
+  grid-column-start: 4;
+}
+.junio .first-day {
+  grid-column-start: 7;
+}
+.julio .first-day {
+  grid-column-start: 2;
+}
+.agosto .first-day {
+  grid-column-start: 5;
+}
+.septiembre .first-day {
+  grid-column-start: 1;
+}
+.octubre .first-day {
+  grid-column-start: 3;
+}
+.noviembre .first-day {
+  grid-column-start: 6;
+}
+.diciembre .first-day {
+  grid-column-start: 1;
+}
+
+/* sombrear los domingos */
+
+.enero .calendar li:nth-child(7n+5),
+.febrero .calendar li:nth-child(7n+2),
+.marzo .calendar li:nth-child(7n+2), 
+.abril .calendar li:nth-child(7n+6),
+.mayo .calendar li:nth-child(7n+4),
+.junio .calendar li:nth-child(7n+1),
+.julio .calendar li:nth-child(7n+6),
+.agosto .calendar li:nth-child(7n+3),
+.septiembre .calendar li:nth-child(7n),
+.octubre .calendar li:nth-child(7n+5),
+.noviembre .calendar li:nth-child(7n+2),
+.diciembre .calendar li:nth-child(7n) {
+  background-color: #eee;
+}
+.day-name {
+  color: #9E9E9E;
+  font-weight: 700;
+}
+.festivo-nacional {
+	background-color: #008fd8 !important;
+	color: #fff;
+}
+.festivo-autonomico {
+	background-color: #4dc3ff !important;
+	color: #fff;
+}
+.festivo-local {
+	background-color: #ff642d !important;
+	color: #fff;
+}
+h1 {
+    color: #5E5D5D;
+    font-size: 24px;
+	margin: 0;
+}
+h3 {
+    color: #5E5D5D;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    padding: 0;
+}
+h2 {
+  text-align: center;
+  background-color: #008fd8;
+  color: #fff;
+  margin: 5px;
+  font-size: 16px;
+  padding: 5px;
+}
+ol {
+  list-style: none !important;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.calendar-wrapper li {
+  padding: 2px !important;
+  list-style-type: none !important;
+}
+.calendar li {
+	cursor: pointer;
+}
+
+#descriptor {
+   margin: 20px 0 0 0;
+}
+#descriptor > small {
+   font-size: 9px;
+}
+
+#info {
+    margin: 10px 10px 10px 30px;
+    border: 1px solid #008fd8;
+    border-radius: 20px;
+    padding: 20px;
+    background: #f9f9f9;
+    font-size: 15px;
+}
+
+hr {
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.cuadrado {
+  float: left;
+  width: 0.5em;
+  height: 0.5em;
+  margin: 0 5px;
+}
+
+.nacional {
+  background: #008fd8;
+}
+
+.autonomico {
+  background: #4dc3ff;
+}
+
+.local {
+  background: #ff642d;
+}
+
+#nombre-empresa {
+  text-align: center;
+}
+
+#leyenda p {
+  font-size: 9px;
+  margin: 0 !important;
+}
+
+.horario-info, .centro-info, .observaciones-info {
+
+}
+
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;   
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.inputfile + label {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    //padding: 0.42rem 1.25rem;
+    width: 100%;
+    text-align: center;
+	padding: 10px 0;
+}
+
+.no-js .inputfile + label {
+    display: none;
+}
+
+.inputfile + label svg {
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    fill: currentColor;
+    margin-top: -0.25em;
+    margin-right: 0.25em;
+}
+
+.inputfile-1 + label {
+    color: #666;
+    border: 1px solid #eaeaea;
+    background-color: #fafafa;
+}
+
+.inputfile-1:focus + label,
+.inputfile-1.has-focus + label,
+.inputfile-1 + label:hover {
+    background-color: #eaeaea;
+    color: #666;
+}
+
+select#ccaa, select#idioma {
+   width: 100%;
+   padding: 10px;
+}
+
+.button {
+  background-color: #008fd8;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
